@@ -24,7 +24,9 @@ public class Solution {
         for (int i = n-1; i >= 0; i--) {
             int arrItem = Integer.parseInt(arrItems[i]);
             arr[i] = arrItem;
-            System.out.print(arrItem + " ");
+             System.out.print(arr[i] + " ");
+            //arritem is not printing anything as it got assigned to arr[i]
+            //System.out.print(arrItem + " ");
         }
 
         scanner.close();
