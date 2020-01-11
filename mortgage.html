@@ -1,0 +1,46 @@
+<doctype! html>
+<html>
+<head>
+<style>
+
+
+h1{color:blue;
+text-align: center;
+min-height:80px;
+}
+h2{color:gray;
+text-align:center;
+}
+p{
+text-align:center;
+}
+</style>
+<script src = "mortgage.js"> </script>
+</head>
+<body>
+<h1>Welcome to mortgage calculator</h1>
+
+<h2>Enter principal</h2><p>  <input type = "text" id = "p"/></p>
+<br/>
+
+<h2>Enter years </h2> <p><input type = "text" id = "y"/></p>
+
+<br/>
+<h2>Enter interest</h2> <p> <input type = "text" id = "i"/></p>
+
+<br/>
+<p><button onclick="c()" id = "calculate" > Calculate </button></p>
+
+<br/>
+<h2>Your monthly mortgage is </h2> <p> <input type = "text" id = "r"/></p>
+<br/>
+<br/>
+<h1>Calculate payment schedule</h1>
+<p><button onclick="remainingBalance()" id = "balance" > Remaining Balance </button></p>
+<br/>
+<h2>Your payment schedule is </h2> <p id = "b"/> </p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+</body>
