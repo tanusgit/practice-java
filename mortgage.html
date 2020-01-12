@@ -1,9 +1,10 @@
-<doctype! html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-
 h1{color:blue;
 text-align: center;
 min-height:80px;
@@ -13,10 +14,29 @@ text-align:center;
 }
 p{
 text-align:center;
+color: sky;
 }
+
+.box {
+min-height:400px;
+width: 600px;
+}
+
+.chart-container{
+text-align:center;
+color:blue;
+width: 50%;
+}
+
 </style>
 <script src = "mortgage.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="https://www.chartjs.org/samples/latest/utils.js">
+</script>
 </head>
+
+
+
 <body>
 <h1>Welcome to mortgage calculator</h1>
 
@@ -36,11 +56,18 @@ text-align:center;
 <br/>
 <br/>
 <h1>Calculate payment schedule</h1>
-<p><button onclick="remainingBalance()" id = "balance" > Remaining Balance </button></p>
+<p><button onclick="remainingBalanceSet()" id = "balance" > Remaining Balance </button></p>
 <br/>
-<h2>Your payment schedule is </h2> <p id = "b"/> </p>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<h1>Your payment schedule is </h1> <p id = "k"/>  </p>
+<br/><br/>
 
+<p><button onclick="chartJS()" id = "chart" > Plot Chart </button></p>
 
+<br/><br/><br/><br/><br/><br/>
+<center>
+<div class="chart-container">
+	<canvas id="canvas"></canvas>
+</div>
+</center>
 
 </body>
