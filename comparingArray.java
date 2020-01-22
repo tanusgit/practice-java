@@ -11,25 +11,23 @@ public class Solution {
    static int alice;
    static int Bob;
     // Complete the compareTriplets function below.
-    static int[] compareTriplets(int[] a, int[] b) {
+ int[] compareTriplets(int[] a, int[] b) {
         res = new int[2];
+        int count = 0;
         for (int i = 0; i < 3; i++){
             if(a[i] > b[i]){
-                alice = 1;
-                Bob = 0;
+                alice++;
+                
             }
-            else if(a[i] == b[i]){
-                alice = 0;
-                Bob = 0;
-            }
+        
             else if(a[i] < b[i]){
-                alice = 0;
-                Bob = 1;
-            }
-            res[0] = alice;
-            res[1] = Bob;
+               
+                Bob++;
+            }   
             
         }
+        res[0] = alice;
+        res[1] = Bob;
        
         return res;
 
@@ -54,8 +52,9 @@ public class Solution {
             int aItem = Integer.parseInt(sb[i]);
             b[i] = aItem;
         }
+        Solution k = new Solution();
 
-        int[] result = compareTriplets(a, b);
+        int[] result = k.compareTriplets(a, b);
 
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + " ");
