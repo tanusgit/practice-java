@@ -21,7 +21,8 @@ public class Solution {
             }
         
             else if(a[i] < b[i]){
-               
+               //we cannot make alice = 0 as in if statement only one statement would execute and if we make alice = 0 here
+                //alice would lose all the points that she accumulated before
                 Bob++;
             }   
             
