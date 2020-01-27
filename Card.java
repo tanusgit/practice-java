@@ -1,9 +1,35 @@
 package linklist;
 
 public class Card {
+	
+	
+	enum suit {
+		Clubs, Diamonds, hearts, Spades;
+	}
+	char value;
+	suit s;
+	boolean errorflag;
+	String res;
+	
+	Card(){
+		res = "A, Spades";
+		System.out.println(res);
+	}
+	
+	Card(char v, suit s){
+		value = v;
+		this.s = s;
+		System.out.println(value + ", " + s);
+	}
+	
+	
+	
+	
+	
+	
 
 	
-	String rank[] = {"Ace", "two", "three", "four", "Five", "six", "seven", "eight",
+	/*String rank[] = {"Ace", "two", "three", "four", "Five", "six", "seven", "eight",
 			"nine", "ten", "jack", "queen", "king"};
 	
 	String suit[] = {"Black clubs", "Red diamonds", "Red hearts", "black pades"};
@@ -30,5 +56,6 @@ public class Card {
 									}
 		
 	}
+	*/
 
 }
