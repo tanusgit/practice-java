@@ -15,7 +15,7 @@ public class GenericList<T> implements Iterable<T>{
 	public Iterator<T> iterator() {
 		// TODO Auto-generated method stub
 		
-		return null;
+		return new ListIterator(this);
 	}
 	
 	private class ListIterator implements Iterator<T>{
@@ -38,7 +38,7 @@ public class GenericList<T> implements Iterable<T>{
 		@Override
 		public T next() {
 			// TODO Auto-generated method stub
-			return null;
+			return list.items[index++];
 		}
 		
 	}
