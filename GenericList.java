@@ -1,24 +1,46 @@
-package ui;
+package linklist;
 
-public class GenericList<E>{
-	//created an arraylist of E type
-	private E[] items;
+import java.util.Iterator;
+
+public class GenericList<T> implements Iterable<T>{
+	T[] items = (T[]) new Object[10];
 	private int count;
-//default constructor to create an arraylist of size of num
-	GenericList(int num){
-		//cannot instantiate E type directly so we need to create arraylist
-		//of object type then we can type cast it to E[]type
-		items = (E[])new Object[num];
+	public void add(T item) {
+		items[count++] = item;
 	}
-	//adding a value of E type
-	public void add (E value){
-		//initially count is zero, next time when we increment the count we 
-		//will store the value in index 1 of array items
-		items[count++] = value;
-	}
-	//returning a value of E type from the given index 
-	public E get(int index){
+	public T get(int index) {
 		return items[index];
+	}
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+	
+	private class ListIterator implements Iterator<T>{
+		
+		private GenericList<T> list;
+		private int index;
+		
+		public ListIterator(GenericList<T> l) {
+			list = l;
+		}
+		
+		
+
+		@Override
+		public boolean hasNext() {
+			// TODO Auto-generated method stub
+			return (index< list.count);
+		}
+
+		@Override
+		public T next() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
 	}
 
 }

@@ -17,9 +17,32 @@ public class Card {
 	}
 	
 	Card(char v, suit s){
+		//converting char to string
+		String stringv =Character.toString(v);
+		if ((!stringv.equals("A")) || (!stringv.equals("1")) || 
+				(!stringv.equals("2")) || (!stringv.equals("3")) || (!stringv.equals("4"))
+				||(!stringv.equals("5")) || (!stringv.equals("6")) || (!stringv.equals("7"))
+				|| (!stringv.equals("8")) || (!stringv.equals("9")) || (!stringv.equals("T")) ||
+				(!stringv.equals("J")) || (!stringv.equals("K")) || (!stringv.equals("Q")))
+		{
+			//System.out.println("illegal value");
+			set(v, s);
+			
+		}
+		
+		else {
 		value = v;
 		this.s = s;
 		System.out.println(value + ", " + s);
+		}
+	}
+	
+	public void set(char v, suit s) {
+		value = v;
+		this.s = s;
+		System.out.println(value + ", " + s);
+		
+		
 	}
 	
 	
