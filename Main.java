@@ -7,15 +7,19 @@ import linklist.Card.suit;
 public class Main {
 	public static void main(String args[]) {
 		List<Customer> list = new ArrayList<>();
-		list.add(new Customer("Mina"));
-		list.add(new Customer("Cina"));
-		list.add(new Customer("Bina"));
-		list.add(new Customer("Aina"));
-		System.out.println(list);
+		list.add(new Customer("Mina", "aina@gmail"));
+		list.add(new Customer("Cina", "bina@gmail"));
+		list.add(new Customer("Bina","cina@gmail"));
+		list.add(new Customer("Aina", "dina@gmail"));
+		//System.out.println(list);
 		//we need to implement comparable interface in customer class to call the sort
 		//method and compare between two customer objects
-		Collections.sort(list);
+		//comparing based on emails so we need to create an object of Emailcomparator
+		//and then pass it to the sort method
+		Collections.sort(list, new Emailcomparator());
 		System.out.println(list);
+		//Collections.sort(list);
+		//System.out.println(list);
 		
 		
 		
