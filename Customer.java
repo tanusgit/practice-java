@@ -3,14 +3,16 @@ package linklist;
 public class Customer implements Comparable<Customer>{
 	private String name;
 	private String email;
+	private int salary;
 	
 	
 	Customer(String n, String e){
 		name = n;
 		email = e;
+		salary = 5000;
 	}
 	public String toString() {
-		return name;
+		return name + salary;
 	}
 	
 	public String getEmail() {

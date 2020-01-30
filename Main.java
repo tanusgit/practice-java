@@ -7,7 +7,11 @@ import linklist.Card.suit;
 public class Main {
 	public static void main(String args[]) {
 		
-		Setdemo k = new Setdemo();
+		MapDemo m = new MapDemo();
+		m.show();
+		
+		
+		/*Setdemo k = new Setdemo();
 		k.show();
 		
 		
