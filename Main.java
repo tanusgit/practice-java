@@ -6,7 +6,13 @@ import linklist.Card.suit;
 //import java.util.LinkedList;
 public class Main {
 	public static void main(String args[]) {
-		List<Customer> list = new ArrayList<>();
+		QueueDemo q = new QueueDemo();
+		q.show();
+		
+		
+		
+		
+		/*List<Customer> list = new ArrayList<>();
 		list.add(new Customer("Mina", "aina@gmail"));
 		list.add(new Customer("Cina", "bina@gmail"));
 		list.add(new Customer("Bina","cina@gmail"));
