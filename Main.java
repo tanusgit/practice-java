@@ -6,7 +6,12 @@ import linklist.Card.suit;
 //import java.util.LinkedList;
 public class Main {
 	public static void main(String args[]) {
-		QueueDemo q = new QueueDemo();
+		
+		Setdemo k = new Setdemo();
+		k.show();
+		
+		
+		/*QueueDemo q = new QueueDemo();
 		q.show();
 		
 		
