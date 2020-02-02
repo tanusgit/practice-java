@@ -127,6 +127,32 @@ public class FirstClass {
 		}	
 	}
 	
+	public void validation2(int id, int age, String agent) {
+		if (id < 1) {
+			System.out.println("Id should be positive");
+		}
+		else {
+			System.out.println("Id is positive");
+			if(age < 18)
+			{
+				System.out.println("Age should be more than 18");
+			}
+			else
+			{
+				System.out.println("Age is valid");	
+				if (agent.equals("agent")) {
+					System.out.println("User type is valid");
+				}
+				else
+					System.out.println("Invalid user type");
+				
+			}
+				
+		}
+	}
+			
+	
+	
 	
 
 }
