@@ -83,5 +83,50 @@ public class FirstClass {
 	
 	
 	
+	public void validation(int id, int age, String agent) {
+		if (id < 1) {
+			System.out.println("Id should be positive");
+		}
+		else
+			System.out.println("valid Id");
+		if(age < 18) {
+			System.out.println("Age should be more than 18");
+		}
+		else
+			System.out.println("Age is valid");
+		if (!agent.equals("agent")) {
+			System.out.println("Invalid user type");
+		}
+		else
+		System.out.println("valid user");
+	}
+	
+	public void cityService(String city) {
+		switch(city) {
+		case "Hyderabad" : System.out.println("service is availalbe");
+		break;
+		case "Mumbai" : System.out.println("service is availalbe");
+		break;
+		case "bangalore" : System.out.println("service is availalbe");
+		break;
+		case "Delhi" : System.out.println("service is availalbe");
+		default : System.out.println("service is not availalbe");
+		}	
+	}
+	
+	public void bankService(String bank) {
+		switch(bank) {
+		case "ICICI" : System.out.println("ROI is 10%");
+		break;
+		case "SBI" : System.out.println("ROI is 11%");
+		break;
+		case "CITI" : System.out.println("ROI is 12%");
+		break;
+		case "HDFC" : System.out.println("ROI is 13%");
+		default : System.out.println("Invalid bank");
+		}	
+	}
+	
+	
 
 }
