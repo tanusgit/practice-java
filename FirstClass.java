@@ -4,22 +4,8 @@ import java.util.Scanner;
 
 public class FirstClass {
 	Scanner scan = new Scanner(System.in);
-	public void show() {
-	System.out.print("Please enter 2 numbers");
-	int input = scan.nextInt();
-	int input2 = scan.nextInt();
-	if(input > input2) {
-		System.out.print("the bigger number is : " + input + " and the smaller number"
-				+ " is " + input2);
-	}
-	else if (input == input2) {
-		System.out.print("both numbers are same");
-	}
-	else {
-			System.out.print("the bigger number is : " + input2 + " and the smaller"
-					+ "number is " + input);
-		}
-	}
+	
+	
 	
 	
 	public void threeNum() {
@@ -35,15 +21,13 @@ public class FirstClass {
 					System.out.println(input3 + " is bigger");
 				}
 			}
-			else if (input2 > input) {
-					if(input2 > input3) {
+			//else if (input2 > input) {
+			
+			else if(input2 > input3) {
 						System.out.println(input2 + " is bigger");
 					}
 					else
 						System.out.println(input3 + " is bigger");
-			}
-			else 
-				System.out.println(input3 + " is bigger");
 		
 	}
 	
@@ -83,7 +67,7 @@ public class FirstClass {
 	
 	
 	
-	public void validation(int id, int age, String agent) {
+	public void validation(int id, int age, String Usertype) {
 		if (id < 1) {
 			System.out.println("Id should be positive");
 		}
@@ -94,7 +78,7 @@ public class FirstClass {
 		}
 		else
 			System.out.println("Age is valid");
-		if (!agent.equals("agent")) {
+		if (!Usertype.equals("agent")) {
 			System.out.println("Invalid user type");
 		}
 		else
@@ -102,7 +86,15 @@ public class FirstClass {
 	}
 	
 	public void cityService(String city) {
-		switch(city) {
+		if(city.equals("Hyderabad") || city.equals("Mumbai") || 
+				city.equals("Delhi") || city.equals("Bangalore"))
+		{
+			System.out.println("service is availalbe");
+		}
+		else
+			System.out.println("service is not availalbe");
+		
+		/*switch(city) {
 		case "Hyderabad" : System.out.println("service is availalbe");
 		break;
 		case "Mumbai" : System.out.println("service is availalbe");
@@ -111,7 +103,7 @@ public class FirstClass {
 		break;
 		case "Delhi" : System.out.println("service is availalbe");
 		default : System.out.println("service is not availalbe");
-		}	
+		}	*/
 	}
 	
 	public void bankService(String bank) {

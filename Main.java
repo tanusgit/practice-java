@@ -6,8 +6,104 @@ import linklist.Card.suit;
 //import java.util.LinkedList;
 public class Main {
 	public static void main(String args[]) {
+		FirstClass m = new FirstClass();
+		//Condition2 n = new Condition2();
 		
-		MapDemo m = new MapDemo();
+		
+		
+		
+		/*m.threeNumSmall();
+		m.equalString("that is", "that is");
+		m.validation(1, 19, "agent");
+		m.bankService("CITI");
+		m.validation2(1, 51, "agentk");*/
+		
+		
+		/*Froyo m = new Froyo();
+		m.freeFroyo();
+		/*int nu = 8;
+		int kk;
+		int res = 0;
+		Scanner mi = new Scanner(System.in);
+		while(true) {
+			System.out.println("type a num");
+			int k = mi.nextInt();
+			res = res +k;
+			System.out.println(res);
+			if(res > 91) {
+				break;
+			}
+		}
+		
+		
+		//second question
+		
+		
+		
+		/*if(input > input2) {
+			System.out.print(input + " is greater than " + input2);
+		}
+		else if(input == input2) {
+			System.out.print(input2 + " and " + input + " are same");
+		}
+		else {
+			System.out.print(input2 + " is greater than " + input);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*TripleString m = new TripleString();
+		System.out.println("printing default constructor " + m);
+		TripleString s = new TripleString("Madhurima", "Nilam", "");
+		System.out.println("printing constructor with parameter " + s);
+		String str1 = s.getString1();
+		System.out.println("printing first string " +str1);
+		String str2 = s.getString2();
+		System.out.println("printing second string " +str2);
+		String str3 = s.getString3();
+		System.out.println("printing third string " +str3);
+		String str4 = s.setString3("Minasini");
+		System.out.println("printing third string after setting it "
+				+ "with a new value: " +str4);
+		String str5 = s.setString2("");
+		System.out.println("printing third string after setting it "
+				+ "with a null value: " +str5);
+		String nostr = "";
+		
+		
+		
+		/*StringOperation m = new StringOperation();
+		char c = m.getKeyCharacter();
+		String s = m.getString();
+		//String res = m.maskCharacter(s, c);
+		//System.out.print(res);
+		//String res2 = m.removeCharacter(s, c);
+		int res2 = m.countKey(s, c);
+		System.out.println(res2);		
+		
+		/*GuiJava ex = new GuiJava();
+		ex.show();
+		
+		/*MapDemo m = new MapDemo();
 		m.show();
 		
 		
@@ -58,14 +154,7 @@ public class Main {
 		
 		
 		
-		/*JFrame frame = new JFrame();
-		JButton button = new JButton("click");
-		
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//add button to the frame's content pane
-		frame.getContentPane().add(button);
-		frame.setSize(300,300);
-		frame.setVisible(true);
+		/*
 		
 		
 		/*
