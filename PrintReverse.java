@@ -20,13 +20,14 @@ public class PrintReverse {
 		//s1.sum(3);
 		
 		PrintEvenOdd even = new PrintEvenOdd();
+		PrintScannerInput.printDiagonal(3);
 		//even.printEven2(22);
 		//PrintStop100.stop100(50);
 		//PrintStop100.stop999(600);
 		//PrintStop100.printinorder(3);
 		
 		//PrintScannerInput.printUserInput();
-		PrintScannerInput.sumofNum999();
+		//PrintScannerInput.sumofNum999();
 		//PrintScannerInput.small("123");
 		//PrintScannerInput.sumofNum999();
 		//PrintScannerInput.rank();

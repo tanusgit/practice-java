@@ -1,7 +1,7 @@
 package loop;
 
 public class PrintStop100 {
-	public static void printinorder(int num) {
+	public static void printDiagonal(int num) {
 		int count = 1;
 		for (int j = 1; j <= num; j++) {
 			for (int i = 1; i <= num; i++) {

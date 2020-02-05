@@ -160,5 +160,23 @@ public class PrintScannerInput {
 		}
 		return smallnum;
 	}
+	
+	//print diagonal values
+	public static void printDiagonal(int num) {
+		int count = 1;
+		for (int j = 1; j <= num; j++) {
+			for (int i = 1; i <= num; i++) {
+				if(i == j)
+					System.out.print(count);
+				
+				if(i + j == num+1) {
+					System.out.print(count);
+				}
+				count++;
+			}
+			System.out.println(" ");
+		}
+
+	}
 
 }
