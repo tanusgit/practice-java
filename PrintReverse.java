@@ -1,8 +1,8 @@
 package loop;
 
 public class PrintReverse {
-	
-	public static void main(String[] args) {
+}
+	/*public static void main(String[] args) {
 		PrintReverse m = new PrintReverse();
 		//m.reverseFive(5);
 		Print123 n = new Print123();
@@ -19,18 +19,7 @@ public class PrintReverse {
 		PrintSum s1 = new PrintSum();
 		//s1.sum(3);
 		
-		PrintEvenOdd even = new PrintEvenOdd();
-		PrintScannerInput.printDiagonal(3);
-		//even.printEven2(22);
-		//PrintStop100.stop100(50);
-		//PrintStop100.stop999(600);
-		//PrintStop100.printinorder(3);
 		
-		//PrintScannerInput.printUserInput();
-		//PrintScannerInput.sumofNum999();
-		//PrintScannerInput.small("123");
-		//PrintScannerInput.sumofNum999();
-		//PrintScannerInput.rank();
 		//int [] array = { 2, 5, 8, 6, 1, 11, 12, 13};
 		//int res = PrintScannerInput.small(array);
 		//System.out.println(res);
@@ -71,3 +60,4 @@ public class PrintReverse {
 	}
 
 }
+*/
