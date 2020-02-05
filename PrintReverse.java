@@ -26,9 +26,13 @@ public class PrintReverse {
 		//PrintStop100.printinorder(3);
 		
 		//PrintScannerInput.printUserInput();
+		PrintScannerInput.sumofNum999();
 		//PrintScannerInput.small("123");
 		//PrintScannerInput.sumofNum999();
-		PrintScannerInput.rank();
+		//PrintScannerInput.rank();
+		//int [] array = { 2, 5, 8, 6, 1, 11, 12, 13};
+		//int res = PrintScannerInput.small(array);
+		//System.out.println(res);
 	}
 	
 	public void printFive(int num) {

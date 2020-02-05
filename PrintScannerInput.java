@@ -23,16 +23,7 @@ public class PrintScannerInput {
 			if (input > big) {
 				big = input;
 			}
-			smaller = list[0];
-			if (smaller >= list[i]) {
-				smaller = list[i];
-			}
-			/*
-			 * try{ for(int k = 0; k <list.length; k ++) { if(list[k] < list[k+1]) { small =
-			 * list[k]; } } } catch( Exception e) {
-			 * 
-			 * }
-			 */
+			smaller = small(list);
 
 			sum = sum + input;
 
@@ -64,14 +55,19 @@ public class PrintScannerInput {
 	public static void sumofNum999() {
 		Scanner sc = new Scanner(System.in);
 		int sum = 0;
+		int small = 0;
+		ArrayList<Integer> list = new ArrayList<>();
 		System.out.println("enter num");
 		while (true) {
 			int input = sc.nextInt();
+			list.add(input);
 			sum = sum + input;
 			System.out.println("the sum of the numbers is " + sum + "");
 			if (input > big) {
 				big = input;
 			}
+			small = smallarraylist(list);
+			
 			if (input == 999)
 				break;
 		}
@@ -101,37 +97,68 @@ public class PrintScannerInput {
 		}
 		System.out.println(student);
 		try {
-		for (int s = 0; s < numbers; s++) {
-			System.out.println("enter marks for 3 subjects for " + student.get(s));
-			for (int i = 0; i < 3; i++) {
-				int marks1 = sc.nextInt();
-				sum = sum + marks1 ;
+			for (int s = 0; s < numbers; s++) {
+				System.out.println("enter marks for 3 subjects for " + student.get(s));
+				for (int i = 0; i < 3; i++) {
+					int marks1 = sc.nextInt();
+					sum = sum + marks1;
+				}
+				System.out.println(student.get(s) + " got total " + sum);
+				Allmarks.add(sum);
 			}
-			System.out.println(student.get(s) + " got total " + sum);
-			Allmarks.add(sum);
+		} catch (Exception e) {
+
 		}
-	}catch(Exception e) {
-		
-	}
 		System.out.println("all students total marks is " + Allmarks);
-		for(int k = 0; k < Allmarks.size(); k++) {
-			if(bigger < Allmarks.get(k)) {
+		for (int k = 0; k < Allmarks.size(); k++) {
+			if (bigger < Allmarks.get(k)) {
 				bigger = Allmarks.get(k);
 				index = Allmarks.indexOf(bigger);
 			}
 		}
-		System.out.println("the maximum total is  " + bigger + "and the "
-				+ "student who got is " + student.get(index));
+		System.out.println("the maximum total is  " + bigger + "and the " + "student who got is " + student.get(index));
 
 	}
 
-	public static void small(String s) {
-		int m = s.length();
-		for (int i = 0; i < m; i++) {
-			char res = s.charAt(i);
-			System.out.print(res);
+	public static int small(int[] array) {
+		int smallnum = 0;
+		try {
+			int size = array.length;
+			smallnum = array[0];
+			for (int i = 0; i < size; i++) {
+				if (smallnum > array[i + 1]) {
+					smallnum = array[i + 1];
+					
+				} else
+					smallnum = smallnum;
+
+			}
+		} catch (Exception e) {
 
 		}
+		return smallnum;
+
+	}
+	
+	
+	
+	public static int smallarraylist(ArrayList<Integer> array) {
+		int smallnum = 0;
+		try {
+			int size = array.size();
+			smallnum = array.get(0);
+			for (int i = 0; i < size; i++) {
+				if (smallnum > array.get(i + 1)) {
+					smallnum = array.get(i + 1);
+					
+				} else
+					smallnum = smallnum;
+
+			}
+		} catch (Exception e) {
+
+		}
+		return smallnum;
 	}
 
 }
