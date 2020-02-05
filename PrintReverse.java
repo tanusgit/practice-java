@@ -23,7 +23,12 @@ public class PrintReverse {
 		//even.printEven2(22);
 		//PrintStop100.stop100(50);
 		//PrintStop100.stop999(600);
-		PrintStop100.printinorder(3);
+		//PrintStop100.printinorder(3);
+		
+		//PrintScannerInput.printUserInput();
+		//PrintScannerInput.small("123");
+		//PrintScannerInput.sumofNum999();
+		PrintScannerInput.rank();
 	}
 	
 	public void printFive(int num) {
