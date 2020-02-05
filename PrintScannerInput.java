@@ -102,17 +102,13 @@ public class PrintScannerInput {
 		System.out.println(student);
 		try {
 		for (int s = 0; s < numbers; s++) {
+			System.out.println("enter marks for 3 subjects for " + student.get(s));
 			for (int i = 0; i < 3; i++) {
-				System.out.println("enter marks for 3 subjects for " + student.get(i));
 				int marks1 = sc.nextInt();
-				int marks2 = sc.nextInt();
-				int marks3 = sc.nextInt();
-				sum = marks1 + marks2 + marks3;
-				System.out.println(student.get(i) + " got total " + sum);
-				Allmarks.add(sum);
+				sum = sum + marks1 ;
 			}
-			
-		
+			System.out.println(student.get(s) + " got total " + sum);
+			Allmarks.add(sum);
 		}
 	}catch(Exception e) {
 		
@@ -124,7 +120,8 @@ public class PrintScannerInput {
 				index = Allmarks.indexOf(bigger);
 			}
 		}
-		System.out.println("the maximum total is  " + bigger + " " + student.get(index));
+		System.out.println("the maximum total is  " + bigger + "and the "
+				+ "student who got is " + student.get(index));
 
 	}
 
