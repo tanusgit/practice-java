@@ -18,13 +18,26 @@ public class SubMatrix {
 
         //printing arraylist which consists matrix
        ArrayList<int[][]> a = AllMatrix(original, r, c, si,sj);
+        ArrayList<Integer> sumofallhourglass = new ArrayList<>();
         for(int[][] res : a){
-            System.out.println("printing matrix one by one");
-            printmatrix(res, 3, 3);
-            ArrayList<Integer> m = hourglass(res, 3, 3);
-            System.out.println("printing hour glass one by one");
-            printArraylist(m);
+            //System.out.println("printing matrix one by one");
+           // printmatrix3(res);
+           ArrayList<Integer> m = hourglass(res, 3, 3);
+           //System.out.println("printing hour glass one by one");
+           //printArraylist(m);
+            int finalres = Sumhourglass(m);
+            sumofallhourglass.add(finalres);
         }
+        int big = 0;
+        for(int res : sumofallhourglass) {
+            if(res > 0){
+                big = res;
+            }
+        }
+        System.out.println("the biggest number " + big);
+
+
+
     }
 
     public static int[][] creatematrix(int r, int c) {
@@ -66,15 +79,18 @@ public class SubMatrix {
 
     public static ArrayList<Integer> hourglass(int[][] arr, int r, int c) {
         ArrayList<Integer> res = new ArrayList<>();
+        int a = 0;
+        int b = arr[1][1];
         for(int i = 0; i < r; i++){
             for(int j = 0; j < c; j++){
-                int a = arr[i][j];
-                if(i == 1 && (j == 0 || j == 2)){
+                if( (i ==1 && (j == 0 || j == 2 ))){
                     break;
                 }
+                a = arr[i][j];
                 res.add(a);
             }
         }
+        res.add(b);
         return res;
     }
 
@@ -87,8 +103,9 @@ public class SubMatrix {
                 res = submatrix(original, i, j);
               //  System.out.println("printing matrix ");
               //  printmatrix(res, 3, 3);
+                a.add(res);
             }
-            a.add(res);
+
         }
         return a;
     }
@@ -97,4 +114,22 @@ public class SubMatrix {
             System.out.print(a + " ");
         }
  }
-}
+
+    public static void printmatrix3(int[][] arr1) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(arr1[i][j] + ", ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int Sumhourglass(ArrayList<Integer> arr) {
+        int res = 0;
+        for(int i = 0; i < arr.size()-1; i++){
+            res = res + arr.get(i);
+            }
+        return res;
+        }
+
+    }
